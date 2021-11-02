@@ -10,7 +10,7 @@
         <div class="col-md-8 mt-5">
             <div class="row">
                 <div class="col-md-4">
-                    <p>Director:</p>
+                    <p class="fw-bold">Director:</p>
                 </div>
                 <div class="col-md-8">
                     <p>{{$pelicula['director']}}</p>
@@ -19,7 +19,7 @@
             <hr>
             <div class="row">
                 <div class="col-md-4">
-                    <h4>Año:</h4>
+                    <p class="fw-bold">Año:</p>
                 </div>
                 <div class="col-md-8">
                     <p>{{$pelicula['year']}}</p>
@@ -28,7 +28,7 @@
             <hr>
             <div class="row">
                 <div class="col-md-4">
-                    <h4>Rentada:</h4>
+                    <p class="fw-bold">Rentada:</p>
                 </div>
                 <div class="col-md-8">
                     @if ($pelicula['rentada'])
@@ -41,12 +41,18 @@
             <hr>
             <div class="row">
                 <div class="col-md-4">
-                    <h4>Sinopsis:</h4>
+                    <p class="fw-bold">Sinopsis:</p>
                 </div>
                 <div class="col-md-8">
                     <p>{{$pelicula['sinopsis']}}</p>
                 </div>
             </div>
+            <button class="btn btn-success py-2 px-5">
+                <div class="d-grid gap-2">
+                    <a href="{{ url('/catalog') }}" class="text-white fs-3">Volver</a>
+                </div>
+            </button>
+            
         </div>
     </div>
 </div>

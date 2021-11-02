@@ -13,8 +13,16 @@
                         <h3 class="card-title">{{$p['titulo']}}</h3>
                         <p class="card-text">Director: {{$p['director']}}</p>
                         <div class="d-grid gap-2">
-                            <a href="{{url('/catalog/show/'.$i)}}" class="btn btn-primary p-2"><h4>Ver Más</h4></a>
-
+                            <button class="btn btn-info py-2 px-5">
+                                <div class="d-grid gap-2">
+                                    <a href="{{ url('/catalog/show/'.$i) }}" class="text-white fs-3">Ver Más</a>
+                                </div>
+                            </button>
+                            <button class="btn btn-warning py-2 px-5">
+                                <div class="d-grid gap-2">
+                                    <a href="{{ url('/catalog/edit/'.$i) }}" class=" fs-3">Editar</a>
+                                </div>
+                            </button>
                         </div>
                     </div>
 
