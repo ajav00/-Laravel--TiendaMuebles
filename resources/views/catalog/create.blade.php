@@ -8,7 +8,7 @@
             <form action="">
                 <div class="mb-3">
                     <label for="titulo" class="form-label">Titulo</label>
-                    <input type="email" class="form-control fs-4" id="titulo" aria-describedby="titulo">
+                    <input type="text" class="form-control fs-4" id="titulo" aria-describedby="titulo">
                 </div>
                 <div class="mb-3">
                     <label for="year" class="form-label">Año</label>
