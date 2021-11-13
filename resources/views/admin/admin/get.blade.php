@@ -27,21 +27,21 @@
                 @foreach ($arrayAdmin as $i => $a )
                     <tr>
                         <td>{{ $a->id }}</td>
-                        <td>{{ $a->name }} {{ $a->fullname }}</td>
+                        <td>{{ $a->nombre }} {{ $a->fullname }}</td>
                         <td>{{ $a->email }}</td>
-                        <td>{{ $a->job }}</td>
-                        <td>{{ $a->cellphone }}</td>
-                        <td>{{ $a->state }}</td>
+                        <td>{{ $a->puesto }}</td>
+                        <td>{{ $a->celular }}</td>
+                        <td>{{ $a->estado }}</td>
                         <td>
                             <button type="button" class="btn btn-warning">
-                                <a href="" class="text-black" >
+                                <a href="" class="text-white" >
                                     Modificar
                                 </a>
                             </button>
                         </td>
                         <td>
                             <button type="button" class="btn btn-danger">
-                                <a href="" class="text-black" >
+                                <a href="" class="text-white" >
                                     Eliminar
                                 </a>
                             </button>

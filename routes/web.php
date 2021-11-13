@@ -27,3 +27,4 @@ Route::get('/login', [PublicPagesController::class, 'getLogin']);
 
 Route::get('/getAdmin', [AdminAdminController::class, 'getAdmin']);
 Route::get('/createAdmin', [AdminAdminController::class, 'createAdmin']);
+Route::post('/createAdmin', [AdminAdminController::class, 'postAdmin']);

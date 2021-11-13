@@ -15,14 +15,14 @@ class CreateAdministratorsTable extends Migration
     {
         Schema::create('administrators', function (Blueprint $table) {
             $table->id();
-            $table->string('job');
-            $table->string('name');
-            $table->string('fullname');
+            $table->string('puesto');
+            $table->string('nombre');
+            $table->string('apellido');
             $table->string('email');
-            $table->string('pass');
-            $table->string('cellphone');
-            $table->string('address');
-            $table->boolean('state')->default(true);
+            $table->string('password');
+            $table->string('celular');
+            $table->string('direccion');
+            $table->boolean('estado')->default(true);
             $table->timestamps();
         });
     }
