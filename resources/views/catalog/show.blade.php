@@ -28,7 +28,7 @@
             <hr>
             <div class="row">
                 <div class="col-md-4">
-                    <p class="fw-bold">Rentada:</p>
+                    <p class="fw-bold">Rentar:</p>
                 </div>
                 <div class="col-md-8">
                     @if ($pelicula['rentada'])
