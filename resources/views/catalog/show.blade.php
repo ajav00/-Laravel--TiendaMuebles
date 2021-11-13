@@ -2,10 +2,10 @@
 @section('content')
 
 <div class="container">
-    <h1 class="text-center my-4">{{$pelicula['titulo']}}</h1>
+    <h1 class="text-center my-4">{{$pelicula->titulo}}</h1>
     <div class="row">
         <div class="col-md-4">
-            <img src="{{$pelicula['poster']}}" class="img-fluid" alt="">
+            <img src="{{$pelicula->poster}}" class="img-fluid" alt="">
         </div>
         <div class="col-md-8 mt-5">
             <div class="row">
@@ -13,7 +13,7 @@
                     <p class="fw-bold">Director:</p>
                 </div>
                 <div class="col-md-8">
-                    <p>{{$pelicula['director']}}</p>
+                    <p>{{$pelicula->director}}</p>
                 </div>
             </div> 
             <hr>
@@ -22,7 +22,7 @@
                     <p class="fw-bold">Año:</p>
                 </div>
                 <div class="col-md-8">
-                    <p>{{$pelicula['year']}}</p>
+                    <p>{{$pelicula->year}}</p>
                 </div>
             </div>
             <hr>
@@ -31,7 +31,7 @@
                     <p class="fw-bold">Rentar:</p>
                 </div>
                 <div class="col-md-8">
-                    @if ($pelicula['rentada'])
+                    @if ($pelicula->rentada)
                         <span class="badge bg-danger">No disponible</span>
                     @else
                         <span class="badge bg-info">Disponible</span>
@@ -44,7 +44,7 @@
                     <p class="fw-bold">Sinopsis:</p>
                 </div>
                 <div class="col-md-8">
-                    <p>{{$pelicula['sinopsis']}}</p>
+                    <p>{{$pelicula->sinopsis}}</p>
                 </div>
             </div>
             <button class="btn btn-success py-2 px-5">
