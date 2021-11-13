@@ -7,8 +7,11 @@
         @foreach ($arrayPeliculas as $i => $p )
             <div class="col-4 mb-4">
                 <div class="card h-100 ">
-
-                    <img src="{{$p->poster}}" class="card-img-top" alt="{{$p->titulo}}">
+                    @if(strpos($p->poster, "http")!==false)
+                        <img src="{{$p->poster}}" class="card-img-top" alt="{{$p->titulo}}">
+                    @else
+                        <img src="{{asset("storage/".$p->poster)}}" class="card-img-top" alt="{{$p->titulo}}">
+                    @endif
                     <div class="card-body">
                         <h3 class="card-title">{{$p->titulo}}</h3>
                         <p class="card-text">Director: {{$p->director}}</p>
