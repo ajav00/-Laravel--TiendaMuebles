@@ -7,20 +7,20 @@ use Illuminate\Http\Request;
 class PublicPagesController extends Controller
 {
     public function getHome(){
-        retun view('Index');
+        return view('pages.home');
     }
     public function getAboutUs(){
-        retun view('AboutUs');
+        return view('pages.aboutUs');
     }
     public function getLogin(){
-        return view('Login');
+        return view('auth.login');
     }
     public function getCreateAccount(){
-        return view('CreateAccount');
+        return view('auth.createAccount');
     }
     
     public function getCatalog(){
-        return view('Catalog');
+        return view('pages.catalog');
     }
     
     
