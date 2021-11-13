@@ -21,4 +21,9 @@ Route::get('/aboutUs', [PublicPagesController::class, 'getAboutUs']);
 Route::get('/catalog', [PublicPagesController::class, 'getCatalog']);
 Route::get('/createAccount', [PublicPagesController::class, 'getCreateAccount']);
 Route::get('/login', [PublicPagesController::class, 'getLogin']);
+
+
+// Admin
+
 Route::get('/getAdmin', [AdminAdminController::class, 'getAdmin']);
+Route::get('/createAdmin', [AdminAdminController::class, 'createAdmin']);
