@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\CatalogController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PagesPublicController;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [PagesPublicController::class, 'getHome']);
+Route::get('/aboutUs', [PagesPublicController::class, 'getAboutUs']);
+Route::get('/catalog', [CatalogController::class, 'getAboutUs']);
