@@ -9,15 +9,15 @@
                 @csrf
                 <div class="mb-3">
                     <label for="titulo" class="form-label">Titulo</label>
-                    <input type="text" name="titulo" class="form-control fs-4" id="titulo" aria-describedby="titulo">
+                    <input type="text" name="titulo" class="form-control fs-4" id="titulo" value="{{ old('titulo') }}" aria-describedby="titulo">
                 </div>
                 <div class="mb-3">
                     <label for="year" class="form-label">Año</label>
-                    <input type="number" value="2020"  min="1900" max="2099" step="1" class="form-control fs-4" id="year" name="year" aria-describedby="year">
+                    <input type="number" value="2020"  min="1900" max="2099" step="1" class="form-control fs-4" id="year" name="year" value="{{ old('year') }}" aria-describedby="year">
                 </div>
                 <div class="mb-3">
                     <label for="director" class="form-label">Director</label>
-                    <input type="text" name="director" class="form-control fs-4" id="director" aria-describedby="director">
+                    <input type="text" name="director" class="form-control fs-4" id="director" value="{{ old('director') }}" aria-describedby="director">
                 </div>
 
                 
@@ -36,7 +36,7 @@
 
                 <div class="mb-3">
                     <label for="sipnosis" class="form-label">Sinopsis:</label>
-                    <textarea name="sinopsis" class="form-control fs-4" id="sinopsis" aria-describedby="sinopsis"></textarea>
+                    <textarea name="sinopsis" class="form-control fs-4" id="sinopsis" value="{{ old('sinopsis') }}" aria-describedby="sinopsis"></textarea>
                 </div>
 
                 <button class="btn btn-primary fs-3 px-4" type="submit">Guardar</button>

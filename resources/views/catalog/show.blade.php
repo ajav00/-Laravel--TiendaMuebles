@@ -5,7 +5,11 @@
     <h1 class="text-center my-4">{{$pelicula->titulo}}</h1>
     <div class="row">
         <div class="col-md-4">
-            <img src="{{$pelicula->poster}}" class="img-fluid" alt="">
+            @if(strpos($pelicula->poster, "http")!==false)
+                <img src="{{$pelicula->poster}}" class="card-img-top" alt="{{$pelicula->titulo}}">
+            @else
+                <img src="{{asset("storage/".$pelicula->poster)}}" class="card-img-top" alt="{{$pelicula->titulo}}">
+            @endif
         </div>
         <div class="col-md-8 mt-5">
             <div class="row">

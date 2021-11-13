@@ -23,15 +23,22 @@ class CatalogController extends Controller
     }
     public function postCreate(Request $request)
     {
-		$video = new Video();
-		$video->titulo = $request->input('titulo');
-		$video->year = $request->input('year');
-		$video->director = $request->input('director');
-		$path = $request->file('poster')->store('posters', 'public');
-		$video->poster = $path;
-		$video->rentada = $request->input('rentada')!==null?1:0;
-		$video->sinopsis = $request->input('sinopsis');
-		$video->save();
+      $validated = $request->validate([
+        'titulo' -> 'required',
+        'year' -> 'required',
+        'director' -> 'required',
+        'poster' -> 'required',
+        'sinopsis' -> 'required',
+      ])
+      $video = new Video();
+      $video->titulo = $request->input('titulo');
+      $video->year = $request->input('year');
+      $video->director = $request->input('director');
+      $path = $request->file('poster')->store('posters', 'public');
+      $video->poster = $path;
+      $video->rentada = $request->input('rentada')!==null?1:0;
+      $video->sinopsis = $request->input('sinopsis');
+      $video->save();
 		// dd($video);
     }
     public function getEdit($id)
