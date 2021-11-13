@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminUserController;
+use App\Http\Controllers\AdminAdminController;
 use App\Http\Controllers\PublicPagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,4 @@ Route::get('/aboutUs', [PublicPagesController::class, 'getAboutUs']);
 Route::get('/catalog', [PublicPagesController::class, 'getCatalog']);
 Route::get('/createAccount', [PublicPagesController::class, 'getCreateAccount']);
 Route::get('/login', [PublicPagesController::class, 'getLogin']);
+Route::get('/getAdmin', [AdminAdminController::class, 'getAdmin']);
