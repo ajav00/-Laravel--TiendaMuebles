@@ -20,7 +20,7 @@ class CreateVideosTable extends Migration
             $table->string('director');
             $table->string('poster');
             $table->boolean('rentada')->default(false);
-            $table->string('sinopsis');
+            $table->longText('sinopsis');
             $table->timestamps();
         });
     }
