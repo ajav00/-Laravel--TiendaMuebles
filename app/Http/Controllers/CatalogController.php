@@ -24,12 +24,12 @@ class CatalogController extends Controller
     public function postCreate(Request $request)
     {
       $validated = $request->validate([
-        'titulo' -> 'required',
-        'year' -> 'required',
-        'director' -> 'required',
-        'poster' -> 'required',
-        'sinopsis' -> 'required',
-      ])
+        'titulo' => 'required',
+        'year' => 'required',
+        'director' => 'required',
+        'poster' => 'required',
+        'sinopsis' => 'required',
+      ]);
       $video = new Video();
       $video->titulo = $request->input('titulo');
       $video->year = $request->input('year');
@@ -39,6 +39,7 @@ class CatalogController extends Controller
       $video->rentada = $request->input('rentada')!==null?1:0;
       $video->sinopsis = $request->input('sinopsis');
       $video->save();
+      return redirect('/catalog');
 		// dd($video);
     }
     public function getEdit($id)
