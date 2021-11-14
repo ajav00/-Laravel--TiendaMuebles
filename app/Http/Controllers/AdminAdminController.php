@@ -37,4 +37,9 @@ class AdminAdminController extends Controller
       return redirect('/getAdmin');
 		// dd($video);
     }
+    public function editAdmin($id)
+    {
+		$administrator = Administrator::find($id);
+        return view('admin.admin.modify', ['administrator'=>$administrator]);
+    }
 }

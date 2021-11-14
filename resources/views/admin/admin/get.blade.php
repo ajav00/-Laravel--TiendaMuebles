@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-between">
         <h1>ADMINISTRADORES</h1>
         <button type="button" class="btn btn-info">
-            <a href="" class="text-white">
+            <a href="{{url('/createAdmin')}}" class="text-white">
                 Crear Nuevo
             </a>    
         </button>
@@ -18,9 +18,8 @@
                     <th class="border-top-0">Correo</th>
                     <th class="border-top-0">Puesto</th>
                     <th class="border-top-0">Celular</th>
-                    <th class="border-top-0">Estado</th>
                     <th class="border-top-0">Editar</th>
-                    <th class="border-top-0">Eliminar</th>
+                    <th class="border-top-0">Estado</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,10 +30,9 @@
                         <td>{{ $a->email }}</td>
                         <td>{{ $a->puesto }}</td>
                         <td>{{ $a->celular }}</td>
-                        <td>{{ $a->estado }}</td>
                         <td>
                             <button type="button" class="btn btn-warning">
-                                <a href="" class="text-white" >
+                                <a href="{{ url('/modifyAdmin/'.$a->id) }}" class="text-white" >
                                     Modificar
                                 </a>
                             </button>
@@ -42,7 +40,7 @@
                         <td>
                             <button type="button" class="btn btn-danger">
                                 <a href="" class="text-white" >
-                                    Eliminar
+                                    Activo
                                 </a>
                             </button>
                         </td>
